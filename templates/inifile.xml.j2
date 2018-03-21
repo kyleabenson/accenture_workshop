@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="keydb.xsl" ?>
+<!DOCTYPE tables SYSTEM "keydb.dtd" >
+<!-- Installation service 'SAP Business Suite 7i 2013 Support Release 2 > EHP3 for SAP CRM 7.0 ABAP Support Release 2 > MS SQL Server > SAP Systems > Application Server ABAP > Standard System > Standard System', product id 'NW_ABAP_OneHost:BS2013SR2.CRM703SR2.MSS.PD' -->
+<tables>
+<tableset  srcid="created_by_controler">
+  <table name="INIFILE_MANAGER" namespaces="INFILE_MANAGER_NS">
+    <columns>
+      <column name="CONFIG">
+        <defaultproperties>
+          <property name="SAPINST_INSTANCE_ID_GENERATION" value="SUBCOMPONENT_ID"/>
+        </defaultproperties>
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_First_Steps-ind-ind-ind-ind-firstSteps-0-Preinstall-ind-ind-ind-ind-Preinstall-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="{{installationMode | default('silent')}}">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_pre"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="installationMode">
+        <properties>
+          <property name ="doc-long" value ="standard or custom " />
+        </properties>
+        <strval><![CDATA[custom]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getFQDN-ind-ind-ind-ind-fqdn-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="setFQDN">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_fqdn"/>
+        </defaultproperties>
+      </column>
+      <column name="FQDN">
+      </column>
+    </columns>
+    <row>
+      <fld name="setFQDN">
+        <properties>
+          <property name ="doc-long" value =" Do we want to set the FQDN for the system?" />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="FQDN">
+        <properties>
+          <property name ="doc-long" value =" The FQDN of the system." />
+        </properties>
+        <strval><![CDATA[solutionworks.com]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getJavaHome-ind-ind-ind-ind-java-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="javaHome">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_java"/>
+        </defaultproperties>
+      </column>
+      <column name="useSAPJVM">
+      </column>
+      <column name="jcePolicyArchive">
+      </column>
+    </columns>
+    <row>
+      <fld name="javaHome">
+        <properties>
+          <property name ="doc-long" value =" The java home directory to use for this installation. Used for gui mapping." />
+        </properties>
+        <strval><![CDATA[C:\Program Files\sapinst_instdir\BS2013SR2\CRM703SR2\MSS\INSTALL\STD\ABAP\sapjvm\sapjvm_6]]>
+        </strval>
+      </fld>
+      <fld name="useSAPJVM">
+        <properties>
+          <property name ="doc-long" value =" True if we should use SAPJVM. Used for UI mapping." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="jcePolicyArchive">
+        <properties>
+          <property name ="doc-long" value =" The path to the jce policy archive to install into the java home directory if it is not already installed." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_GetUserParameter-ind-ind-ind-ind-users-0-NW_GetMasterPassword-ind-ind-ind-ind-masterpwd-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="masterPwd">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_masterpwd"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="masterPwd">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[des24(81|44|188|215|176|88|46|126|99|236|51|100|139|212|6|192|217|116|)]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_GetUserParameter-ind-ind-ind-ind-users-0-NW_GetUserParameterWindows-ind-ind-ind-ind-users_win-0-NW_GetDomainOU-ind-ind-ind-ind-domain_ou-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="isOUInstallation">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_domainou"/>
+        </defaultproperties>
+      </column>
+      <column name="windows_domain_ous">
+      </column>
+      <column name="ou_delimiter">
+      </column>
+    </columns>
+    <row>
+      <fld name="isOUInstallation">
+        <properties>
+          <property name ="doc-long" value =" If this is true, we have Organisational Units created for this installation." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="windows_domain_ous">
+        <properties>
+          <property name ="doc-long" value =" The Organisational Units for this installation." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="ou_delimiter">
+        <properties>
+          <property name ="doc-long" value =" The delimiter of OU" />
+        </properties>
+        <strval><![CDATA[/]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_GetUserParameter-ind-ind-ind-ind-users-0-NW_GetUserParameterWindows-ind-ind-ind-ind-users_win-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sapDomain">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_Win"/>
+        </defaultproperties>
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+      <column name="sapServiceSIDPassword">
+      </column>
+    </columns>
+    <row>
+      <fld name="sapDomain">
+        <properties>
+          <property name ="doc-long" value =" The windows domain name for the OS users" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+          <property name ="doc-long" value =" Password of the sidadm user." />
+        </properties>
+        <strval><![CDATA[HhjG3aQ2Apv38p]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSIDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+          <property name ="doc-long" value =" Password of the SAPServiceSID user." />
+        </properties>
+        <strval><![CDATA[Vw5RDDtcV3b4VU]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_GetUserParameter-ind-ind-ind-ind-users-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sapAdmPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_users"/>
+        </defaultproperties>
+      </column>
+      <column name="hostAgentDomain">
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+      <column name="sapServiceSIDPassword">
+      </column>
+      <column name="sapDomain">
+      </column>
+      <column name="smdAdmPassword">
+      </column>
+      <column name="sapServiceSMDPassword">
+      </column>
+      <column name="smdAgentDomain">
+      </column>
+    </columns>
+    <row>
+      <fld name="sapAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the SAP Host Agent specific sapadm user. Provided value may be encoded." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="hostAgentDomain">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+        </properties>
+        <strval><![CDATA[HhjG3aQ2Apv38p]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSIDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+        </properties>
+        <strval><![CDATA[8yTsKtFUtBzQvS]]>
+        </strval>
+      </fld>
+      <fld name="sapDomain">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the Diagnostics Agent specific &lt;dasid&gt;adm user. Provided value may be encoded." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSMDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the Diagnostics Agent specific SAPService&lt;DASID&gt; user. Provided value may be encoded.
+The property is Microsoft Windows only." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAgentDomain">
+        <properties>
+          <property name ="doc-long" value =" Windows domain in which the Diagnostics Agent users must be created.
+The property is Microsoft Windows only. This is an optional property." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_getLoadType-ind-ind-ind-ind-loadType-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="loadType">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_loadType"/>
+        </defaultproperties>
+      </column>
+      <column name="doMigMonConfig">
+      </column>
+    </columns>
+    <row>
+      <fld name="loadType">
+        <properties>
+          <property name ="doc-long" value =" Valid values are: SAP, STD, OBR, HCP, MDAThe loadtype chosen by the user." />
+        </properties>
+        <strval><![CDATA[SAP]]>
+        </strval>
+      </fld>
+      <fld name="doMigMonConfig">
+        <properties>
+          <property name ="doc-long" value =" Manual configuration and execution of Migration Monitor." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_MSS_DBINFO-ind-ind-ind-ind-mss-0-MssLoginInfo-ind-ind-ind-ind-login-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DbServer">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_MssLoginInfo_CONTEXT"/>
+        </defaultproperties>
+      </column>
+      <column name="LoginType">
+      </column>
+      <column name="Login">
+      </column>
+      <column name="Password">
+      </column>
+    </columns>
+    <row>
+      <fld name="DbServer">
+        <properties>
+          <property name ="doc-long" value =" Database server to connect to." />
+        </properties>
+        <strval><![CDATA[HPTHOR-CRM1]]>
+        </strval>
+      </fld>
+      <fld name="LoginType">
+        <properties>
+          <property name ="doc-long" value =" Login type: WIN or SQL (doesn't metter if AllowSQLLogin is false)" />
+        </properties>
+        <strval><![CDATA[WIN]]>
+        </strval>
+      </fld>
+      <fld name="Login">
+        <properties>
+          <property name ="doc-long" value =" SQL login to use (if any)." />
+        </properties>
+        <strval><![CDATA[sa]]>
+        </strval>
+      </fld>
+      <fld name="Password">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the SQL login" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_MSS_DBINFO-ind-ind-ind-ind-mss-0-MssDatabaseInfo-ind-ind-ind-ind-db-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Action">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_MssDatabaseInfo_CONTEXT"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="Action">
+        <properties>
+          <property name ="doc-long" value =" Define whether SWPM will create (&quot;CRE&quot;) a new or re-use (&quot;USE&quot;) an existing database." />
+        </properties>
+        <strval><![CDATA[CRE]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_MSS_DBINFO-ind-ind-ind-ind-mss-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="dbsid">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_mss"/>
+        </defaultproperties>
+      </column>
+      <column name="dbhost">
+      </column>
+    </columns>
+    <row>
+      <fld name="dbsid">
+        <properties>
+          <property name ="doc-long" value ="The DB SID " />
+        </properties>
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="dbhost">
+        <properties>
+          <property name ="doc-long" value ="The DB host " />
+        </properties>
+        <strval><![CDATA[HPTHOR-CRM1]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_GetSidNoProfiles-ind-ind-ind-ind-getSid-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sid">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_sid"/>
+        </defaultproperties>
+      </column>
+      <column name="sapdrive">
+      </column>
+      <column name="SAP_GUI_DEFAULT_LANGUAGE">
+      </column>
+      <column name="aspDevice">
+      </column>
+    </columns>
+    <row>
+      <fld name="sid">
+        <properties>
+          <property name ="doc-long" value =" The SAP System ID of the system to install" />
+        </properties>
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="sapdrive">
+        <properties>
+          <property name ="doc-long" value =" The drive to use (windows only)" />
+        </properties>
+        <strval><![CDATA[E:]]>
+        </strval>
+      </fld>
+      <fld name="SAP_GUI_DEFAULT_LANGUAGE">
+        <properties>
+          <property name ="doc-long" value =" Human readable form of the Default Login language - used for instant in the preselection in SAPGUI. This Parameter is potentialy asked in addition in the dialog that also asks for the SID. It is not asked in all this dialogs, but only in systems that have ( potentialy beside others ) an ABAP stack. It is ask for installation but not for system copy. It is asked in those installations, that perform the ABAP load. That could be the Database Load installation in case of a distributed szenario, or in the Standard Installer, that is not distributed at all. This Parameter is saved in the Default Profile. It is has no influence on Language settings in a Java Stack. Valid names are stored in a table of the subcomponent NW_languagesInLoadChecks. The available languages must be declaired in the LANGUAGES_IN_LOAD parameter of the product.xml . In this file the one character representation of the languages is uses. Check the same table in the subcomponent mentioned above." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="aspDevice">
+        <properties>
+          <property name ="doc-long" value =" The ASP device name where the SAP system will be in installed." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_System-ind-ind-ind-ind-system-0-NW_SAPHostAgent-ind-ind-ind-ind-hostagent-0-NW_GetUserParameter-ind-ind-ind-ind-userParams-0-NW_GetUserParameterWindows-ind-ind-ind-ind-users_win-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sapDomain">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_Win"/>
+        </defaultproperties>
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+    </columns>
+    <row>
+      <fld name="sapDomain">
+        <properties>
+          <property name ="doc-long" value =" The windows domain name for the OS users" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+          <property name ="doc-long" value =" Password of the sidadm user." />
+        </properties>
+        <strval><![CDATA[HhjG3aQ2Apv38p]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_System-ind-ind-ind-ind-system-0-NW_SAPHostAgent-ind-ind-ind-ind-hostagent-0-NW_GetUserParameter-ind-ind-ind-ind-userParams-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sapAdmPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_userParams"/>
+        </defaultproperties>
+      </column>
+      <column name="hostAgentDomain">
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+      <column name="sapServiceSIDPassword">
+      </column>
+      <column name="sapDomain">
+      </column>
+      <column name="smdAdmPassword">
+      </column>
+      <column name="sapServiceSMDPassword">
+      </column>
+      <column name="smdAgentDomain">
+      </column>
+    </columns>
+    <row>
+      <fld name="sapAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the SAP Host Agent specific sapadm user. Provided value may be encoded." />
+        </properties>
+        <strval><![CDATA[des24(81|44|188|215|176|88|46|126|99|236|51|100|139|212|6|192|217|116|)]]>
+        </strval>
+      </fld>
+      <fld name="hostAgentDomain">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSIDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapDomain">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the Diagnostics Agent specific &lt;dasid&gt;adm user. Provided value may be encoded." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSMDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the Diagnostics Agent specific SAPService&lt;DASID&gt; user. Provided value may be encoded.
+The property is Microsoft Windows only." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAgentDomain">
+        <properties>
+          <property name ="doc-long" value =" Windows domain in which the Diagnostics Agent users must be created.
+The property is Microsoft Windows only. This is an optional property." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_System-ind-ind-ind-ind-system-0-NW_adaptProfile-ind-ind-ind-ind-adaptProfile-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="templateFiles">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_adaptProfile"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="templateFiles">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_System-ind-ind-ind-ind-system-0_t_profileParameters" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="addNumbered">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="instanceNumber">
+      </column>
+      <column name="name">
+      </column>
+      <column name="value">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_System-ind-ind-ind-ind-system-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="installSAPHostAgent">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_system"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="installSAPHostAgent">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_MSS_DB-ind-ind-ind-ind-mss-0-MssSchemaCleanup-ind-ind-ind-ind-schemaobj-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="MustCleanup">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_MssSchemaCleanup_CONTEXT"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="MustCleanup">
+        <properties>
+          <property name ="doc-long" value =" Output." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_MSS_DB-ind-ind-ind-ind-mss-0-NW_MSS_DBUSR-ind-ind-ind-ind-dbpass-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="abapPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_NW_MSS_DBUSR_CONTEXT"/>
+        </defaultproperties>
+      </column>
+      <column name="javaPassword">
+      </column>
+    </columns>
+    <row>
+      <fld name="abapPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value ="Password of DB user sid. " />
+        </properties>
+        <strval><![CDATA[des24(81|44|188|215|176|88|46|126|99|236|51|100|139|212|6|192|217|116|)]]>
+        </strval>
+      </fld>
+      <fld name="javaPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value ="Password of DB user SAPsidDB. " />
+        </properties>
+        <strval><![CDATA[des24(81|44|188|215|176|88|46|126|99|236|51|100|139|212|6|192|217|116|)]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_MSS_DB-ind-ind-ind-ind-mss-0-MssDbLayout-ind-ind-ind-ind-dbfiles-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DbSize">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_MssDbLayout_CONTEXT"/>
+        </defaultproperties>
+      </column>
+      <column name="ForceTotalDbSize">
+      </column>
+      <column name="ForceOneDataFile">
+      </column>
+      <column name="defDataPath">
+      </column>
+      <column name="defLogPath">
+      </column>
+    </columns>
+    <row>
+      <fld name="DbSize">
+        <properties>
+          <property name ="doc-long" value ="Default size - determines number of db files. " />
+        </properties>
+        <strval><![CDATA[MEDIUM]]>
+        </strval>
+      </fld>
+      <fld name="ForceTotalDbSize">
+        <properties>
+          <property name ="doc-long" value ="Internal use: overwrite the SAPinst-default behaviour to determine the required db data size. Force SAPinst to use the value [MB] specified as the expected data load. " />
+        </properties>
+        <strval><![CDATA[-1]]>
+        </strval>
+      </fld>
+      <fld name="ForceOneDataFile">
+        <properties>
+          <property name ="doc-long" value ="Internal use: overwrite the SAPinst-default behaviour - do only create one db data file (value of &quot;DbSize&quot; (see above) will be ignored!). " />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="defDataPath">
+        <properties>
+          <property name ="doc-long" value ="Disk drive where the data files will be created " />
+        </properties>
+        <strval><![CDATA[E:]]>
+        </strval>
+      </fld>
+      <fld name="defLogPath">
+        <properties>
+          <property name ="doc-long" value ="Disk drive Where the log files will be created " />
+        </properties>
+        <strval><![CDATA[E:]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_MSS_DB-ind-ind-ind-ind-mss-0-NW_MSS_SRVCFG-ind-ind-ind-ind-mssSrvCfg-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="MemoryOption">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_NW_MSS_SRVCFG_CONTEXT"/>
+        </defaultproperties>
+      </column>
+      <column name="MinRamCustom">
+      </column>
+      <column name="MaxRamCustom">
+      </column>
+    </columns>
+    <row>
+      <fld name="MemoryOption">
+        <properties>
+          <property name ="doc-long" value ="Determines if the memory should be changed (when value != &quot;NO_CONFIG&quot;) and if the default (value = &quot;DEFAULT&quot;) should be applied or a custom setting (value = &quot;CUSTOM&quot;) using MinRamCustom/MaxRamCustom of this interface. " />
+        </properties>
+        <strval><![CDATA[DEFAULT]]>
+        </strval>
+      </fld>
+      <fld name="MinRamCustom">
+        <properties>
+          <property name ="doc-long" value ="Min memory of the database server. " />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="MaxRamCustom">
+        <properties>
+          <property name ="doc-long" value ="Max memory of the database server. " />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_MSS_DB-ind-ind-ind-ind-mss-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="defaultRam">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="tMSS_DB_CONTEXT"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="defaultRam">
+        <properties>
+          <property name ="doc-long" value =" A default RAM-size used for the configuration of min/max server memory can be assigned by a positive value" />
+        </properties>
+        <strval><![CDATA[-1]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_ABAP_Import_Dialog-ind-ind-ind-ind-abapload-0-InitDeclusteringForImport-ind-ind-ind-ind-initDeclustering-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="decluster">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_initDeclustering"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="decluster">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_ABAP_Import_Dialog-ind-ind-ind-ind-abapload-0-NW_ABAP_Import-ind-ind-ind-ind-nw_abap_import-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="hdbReorgCheckFile">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_NW_ABAP_Import"/>
+        </defaultproperties>
+      </column>
+      <column name="hdbShowReorgCheckDialogOnSuccess">
+      </column>
+      <column name="sybImportEnv">
+      </column>
+    </columns>
+    <row>
+      <fld name="hdbReorgCheckFile">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="hdbShowReorgCheckDialogOnSuccess">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="sybImportEnv">
+        <properties>
+          <property name ="doc-long" value =" SAP ASE: Additional environment settings for the LOAD phase." />
+        </properties>
+        <strval><![CDATA[dbs_syb_connect_retries,10]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_ABAP_Import_Dialog-ind-ind-ind-ind-abapload-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="migmonJobNum">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_abap_load"/>
+        </defaultproperties>
+      </column>
+      <column name="migmonCtrlParameters">
+      </column>
+      <column name="useAdditionalExportHosts">
+      </column>
+      <column name="hdbManualImport">
+      </column>
+      <column name="hdbOmitPackages">
+      </column>
+      <column name="hdbOmitPackagesFile">
+      </column>
+      <column name="hdbOmitPackagesString">
+      </column>
+      <column name="hdbOmitPackagesCreateIndexes">
+      </column>
+      <column name="hdbUseDdlMappingFile">
+      </column>
+      <column name="hdbDdlMappingFile">
+      </column>
+      <column name="netStatisticsFiles">
+      </column>
+    </columns>
+    <row>
+      <fld name="migmonJobNum">
+        <properties>
+          <property name ="doc-long" value =" Number of parallel Migration Monitor jobs." />
+        </properties>
+        <strval><![CDATA[3]]>
+        </strval>
+      </fld>
+      <fld name="migmonCtrlParameters">
+        <properties>
+          <property name ="doc-long" value =" Enables Parameter table to specify specific parameters ('DEFAULT' or 'CUSTOM')." />
+        </properties>
+        <strval><![CDATA[DEFAULT]]>
+        </strval>
+      </fld>
+      <fld name="useAdditionalExportHosts">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="hdbManualImport">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="hdbOmitPackages">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="hdbOmitPackagesFile">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="hdbOmitPackagesString">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="hdbOmitPackagesCreateIndexes">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="hdbUseDdlMappingFile">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="hdbDdlMappingFile">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="netStatisticsFiles">
+        <strval><![CDATA[export_statistics.properties]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0_t_migmonCtrlParameters" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Parameter">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="Value">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="movePVCforUsagePiAndDi">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_createDBandLoad"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="movePVCforUsagePiAndDi">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_IcmAuth-ind-ind-ind-ind-icmauth-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="webadmPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_icmauth"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="webadmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[des24(81|44|188|215|176|88|46|126|99|236|51|100|139|212|6|192|217|116|)]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_adaptProfile-ind-ind-ind-ind-adaptProfile-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="templateFiles">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_adaptProfile"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="templateFiles">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0_t_profileParameters" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="addNumbered">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="instanceNumber">
+      </column>
+      <column name="name">
+      </column>
+      <column name="value">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_SLD_Configuration-ind-ind-ind-ind-sldConfiguration-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="configureSld">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_sldConfig"/>
+        </defaultproperties>
+      </column>
+      <column name="sldUser">
+      </column>
+      <column name="sldUserPassword">
+      </column>
+      <column name="sldHost">
+      </column>
+      <column name="sldPort">
+      </column>
+      <column name="useHttps">
+      </column>
+    </columns>
+    <row>
+      <fld name="configureSld">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="sldUser">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sldUserPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sldHost">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sldPort">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="useHttps">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_AclInfo_Configuration-ind-ind-ind-ind-aclInfoConfiguration-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="configureAclInfo">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_aclInfoConfig"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="configureAclInfo">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_Instance-ind-ind-ind-ind-scsInstance-0-NW_adaptProfile-ind-ind-ind-ind-adaptProfile-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="templateFiles">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_adaptProfile"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="templateFiles">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_Instance-ind-ind-ind-ind-scsInstance-0_t_profileParameters" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="addNumbered">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="instanceNumber">
+      </column>
+      <column name="name">
+      </column>
+      <column name="value">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_CI_Instance_ABAP_Reports-ind-ind-ind-ind-abapReports-0-NW_DDIC_Password-ind-ind-ind-ind-ddicPassword-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="ddic000Password">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_ddic"/>
+        </defaultproperties>
+      </column>
+      <column name="ddic001Password">
+      </column>
+      <column name="needDDICPasswords">
+      </column>
+    </columns>
+    <row>
+      <fld name="ddic000Password">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+          <property name ="doc-long" value ="Password for the DDIC user in client 000 " />
+        </properties>
+        <strval><![CDATA[Autom8ion]]>
+        </strval>
+      </fld>
+      <fld name="ddic001Password">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="NO" />
+          <property name ="doc-long" value ="Password for the DDIC user in client 001 " />
+        </properties>
+        <strval><![CDATA[Autom8ion]]>
+        </strval>
+      </fld>
+      <fld name="needDDICPasswords">
+        <properties>
+          <property name ="doc-long" value ="Are the passwords for the DDIC users different from the default value? " />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_CI_Instance_ABAP_Reports-ind-ind-ind-ind-abapReports-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="enableTMSConfigWithoutStackXml">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_abap"/>
+        </defaultproperties>
+      </column>
+      <column name="enableTransportsWithoutStackXml">
+      </column>
+      <column name="enableActivateICFService">
+      </column>
+      <column name="enableSPAMUpdateWithoutStackXml">
+      </column>
+      <column name="executeReportsForDepooling">
+      </column>
+      <column name="askDepoolingReportExecution">
+      </column>
+    </columns>
+    <row>
+      <fld name="enableTMSConfigWithoutStackXml">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="enableTransportsWithoutStackXml">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="enableActivateICFService">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="enableSPAMUpdateWithoutStackXml">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="executeReportsForDepooling">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="askDepoolingReportExecution">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0-NW_ABAP_SSFS_Custom_Key-ind-ind-ind-ind-customKey-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="ssfsKeyInputFile">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_abap_ssfs_custom_key"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="ssfsKeyInputFile">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_CI_Instance-ind-ind-ind-ind-ci-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="instanceNumber">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_ci"/>
+        </defaultproperties>
+      </column>
+      <column name="ciMSPort">
+      </column>
+      <column name="ciMSPortInternal">
+      </column>
+      <column name="secStoreSrcDir">
+      </column>
+      <column name="transHost">
+      </column>
+      <column name="ascsInstanceNumber">
+      </column>
+      <column name="installOfflineDoc">
+      </column>
+      <column name="nodesNumber">
+      </column>
+      <column name="nodesNum">
+      </column>
+      <column name="ciVirtualHostname">
+      </column>
+      <column name="ascsVirtualHostname">
+      </column>
+      <column name="scsVirtualHostname">
+      </column>
+      <column name="createGlobalRegInfoFile">
+      </column>
+      <column name="createGlobalProxyInfoFile">
+      </column>
+    </columns>
+    <row>
+      <fld name="instanceNumber">
+        <strval><![CDATA[00]]>
+        </strval>
+      </fld>
+      <fld name="ciMSPort">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="ciMSPortInternal">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="secStoreSrcDir">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="transHost">
+        <strval><![CDATA[hpthor-crm1]]>
+        </strval>
+      </fld>
+      <fld name="ascsInstanceNumber">
+        <strval><![CDATA[01]]>
+        </strval>
+      </fld>
+      <fld name="installOfflineDoc">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="nodesNumber">
+        <strval><![CDATA[defNodes]]>
+        </strval>
+      </fld>
+      <fld name="nodesNum">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="ciVirtualHostname">
+        <strval><![CDATA[hpthor-crm1]]>
+        </strval>
+      </fld>
+      <fld name="ascsVirtualHostname">
+        <strval><![CDATA[hpthor-crm1]]>
+        </strval>
+      </fld>
+      <fld name="scsVirtualHostname">
+        <strval><![CDATA[hpthor-crm1]]>
+        </strval>
+      </fld>
+      <fld name="createGlobalRegInfoFile">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="createGlobalProxyInfoFile">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_Unpack2-ind-ind-ind-ind-unpack-0-NW_SAPCrypto-ind-ind-ind-ind-crypto-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="SAPCryptoFile">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_cryptoContext"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="SAPCryptoFile">
+        <strval><![CDATA[E:/Kernel7.42/Kernel/DATA_UNITS/K_742_U_WINDOWS_X86_64/DBINDEP/SAPEXE.SAR]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_Unpack2-ind-ind-ind-ind-unpack-0_t_cryptoTable" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="path">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="sid">
+      </column>
+      <column name="unpackThis">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0-NW_Unpack2-ind-ind-ind-ind-unpack-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="SAPEXESAR">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_unpack"/>
+        </defaultproperties>
+      </column>
+      <column name="SAPEXEDBSAR">
+      </column>
+      <column name="IGSEXESAR">
+      </column>
+      <column name="IGSHELPERSAR">
+      </column>
+      <column name="SAPJVMSAR">
+      </column>
+      <column name="XS2SAR">
+      </column>
+    </columns>
+    <row>
+      <fld name="SAPEXESAR">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\SAPEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="SAPEXEDBSAR">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\MSS\SAPEXEDB.SAR]]>
+        </strval>
+      </fld>
+      <fld name="IGSEXESAR">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\IGSEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="IGSHELPERSAR">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\IGSHELPER.SAR]]>
+        </strval>
+      </fld>
+      <fld name="SAPJVMSAR">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="XS2SAR">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0-NW_Onehost_System-ind-ind-ind-ind-onehost-0_t_askUnpack" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="codepage">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="ctx">
+      </column>
+      <column name="destination">
+      </column>
+      <column name="ownPath">
+      </column>
+      <column name="path">
+      </column>
+      <column name="sid">
+      </column>
+      <column name="unpack">
+      </column>
+    </columns>
+    <row>
+      <fld name="codepage">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[Unicode]]>
+        </strval>
+      </fld>
+      <fld name="ctx">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="destination">
+        <strval><![CDATA[E:\usr\sap\C01\SYS\exe\uc\NTAMD64]]>
+        </strval>
+      </fld>
+      <fld name="ownPath">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\SAPEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[DBINDEP\SAPEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="sid">
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="unpack">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+    <row>
+      <fld name="codepage">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[Unicode]]>
+        </strval>
+      </fld>
+      <fld name="ctx">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="destination">
+        <strval><![CDATA[E:\usr\sap\C01\SYS\exe\uc\NTAMD64]]>
+        </strval>
+      </fld>
+      <fld name="ownPath">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\MSS\SAPEXEDB.SAR]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[MSS\SAPEXEDB.SAR]]>
+        </strval>
+      </fld>
+      <fld name="sid">
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="unpack">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+    <row>
+      <fld name="codepage">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[Unicode]]>
+        </strval>
+      </fld>
+      <fld name="ctx">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="destination">
+        <strval><![CDATA[E:\usr\sap\C01\SYS\exe\uc\NTAMD64]]>
+        </strval>
+      </fld>
+      <fld name="ownPath">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\IGSEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[DBINDEP\IGSEXE.SAR]]>
+        </strval>
+      </fld>
+      <fld name="sid">
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="unpack">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+    <row>
+      <fld name="codepage">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[Unicode]]>
+        </strval>
+      </fld>
+      <fld name="ctx">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="destination">
+        <strval><![CDATA[E:\usr\sap\C01\DVEBMGS00]]>
+        </strval>
+      </fld>
+      <fld name="ownPath">
+        <strval><![CDATA[E:\Kernel7.42\Kernel\DATA_UNITS\K_742_U_WINDOWS_X86_64\DBINDEP\IGSHELPER.SAR]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[DBINDEP\IGSHELPER.SAR]]>
+        </strval>
+      </fld>
+      <fld name="sid">
+        <strval><![CDATA[C01]]>
+        </strval>
+      </fld>
+      <fld name="unpack">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0_t_r3LoadEnviroment" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Name">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="Value">
+      </column>
+    </columns>
+  </table>
+  <table name="ParameterTable-NW_ABAP_OneHost-ind-ind-ind-ind-0-0_t_r3LoadParameter" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Value">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_OneHost-ind-ind-ind-ind-0-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="enableImig">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="NW_ABAP_OneHost_CONTEXT"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="enableImig">
+        <properties>
+          <property name ="doc-long" value =" 'true' if IMIG should be enabled." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+</tableset>
+</tables>

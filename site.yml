@@ -1,0 +1,32 @@
+---
+- name: Install and start MySQL server
+  hosts: node1
+  become: yes
+  vars:
+     rpm_path: mysql57-community-release-el7-8.noarch.rpm
+  tasks:
+   - name: Copy rpm to end system
+     copy:
+      src: "files/{{ rpm_path }}"
+      dest: /tmp
+   - name: Install MySql RPM repo package
+     yum:
+       name: "/tmp/{{ rpm_path }}"
+       state: present
+   
+   - name: Install MySQL server rpm
+     yum: 
+       name:  mysql-server
+       state: present
+
+   - name: Start MySQL server
+     service: 
+       name: mysqld
+       state: started
+       enabled: yes
+   
+   - name: Move config file to location
+     template:
+        src: templates/inifile.xml.j2
+        dest: /tmp/inifile.xml
+
